@@ -1,0 +1,78 @@
+@import '../../css/constant.scss';
+
+.Footer {
+    padding: 100px 0;
+    border-top: 1px solid $blue-color;
+    .content {
+        display: flex;
+        flex-direction: row;
+        @media screen and (min-width: 880px) {
+            width: 1200px;
+            margin: 0 auto;
+            @media screen and (max-width: 1240px) {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+            .footer__box {
+                margin-right: 100px;
+                &.align__right {
+                    margin-left: auto;
+                }
+                .footer__subtitle {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+                .footer__description {
+                    font-size: 14px;
+                    font-weight: 500;
+                    width: 300px;
+                    line-height: 1.5rem;
+                }
+                .footer__link {
+                    color: $blue-color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: 0.3s;
+                    &:hover {
+                        transition: 0.3s;
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 880px) {
+            flex-direction: column;
+            margin: 0 20px;
+            .footer__box {
+                margin-bottom: 20px;
+                .footer__subtitle {
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 30px;
+                }
+                .footer__description {
+                    font-size: 14px;
+                    font-weight: 500;
+                    line-height: 1.5rem;
+                }
+                .footer__link {
+                    color: $blue-color;
+                    font-size: 16px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                    cursor: pointer;
+                    user-select: none;
+                    transition: 0.3s;
+                    &:hover {
+                        transition: 0.3s;
+                        color: $dark-blue;
+                    }
+                }
+            }
+        }
+    }
+}

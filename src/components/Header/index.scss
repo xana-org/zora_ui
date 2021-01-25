@@ -1,0 +1,172 @@
+@import '../../css/constant.scss';
+
+.Header {
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    z-index: 0;
+    background-color: white;
+    border-bottom: 1px solid $blue-color;
+    .content {
+        margin: 0 auto;
+        display: flex;
+        flex-direction: row;
+        @media screen and (min-width: 880px) {
+            width: 1200px;
+            margin: 0 auto;
+            @media screen and (max-width: 1240px) {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+            .header__title {
+                margin: auto 0;
+                margin-right: 40px;
+                .purple__circle {
+                    background-color: #DCD9FF;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    position: absolute;
+                    z-index: -1;
+                    margin-top: 10px;
+                }
+                .zora__text {
+                    margin-left: 5px;
+                    font-size: 30px;
+                    font-family: "Roboto-Bold";
+                    cursor: pointer;
+                    user-select: none;
+                    color: black;
+                }
+            }
+            .nav__item {
+                margin: auto 30px auto 0;
+                font-size: 16px;
+                font-weight: 500;
+                cursor: pointer;
+                user-select: none;
+                transition: 0.3s;
+                color: black;
+                opacity: 0.9;
+                &:hover {
+                    opacity: 1;
+                    transition: 0.3s;
+                }
+            }
+            .subcontent {
+                display: flex;
+                flex-direction: row;
+                margin: 0 auto;
+                .item {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .text {
+                        font-family: Raleway;
+                        font-size: 12px;
+                        font-weight: 500;
+                        color: black;
+                        margin-right: 30px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        opacity: 0.7;
+                        &:hover {
+                            transition: 0.3s;
+                            opacity: 0.8;
+                        }
+                    }
+                    .social {
+                        margin-right: 20px;
+                        cursor: pointer;
+                        transition: 0.3s;
+                        opacity: 0.7;
+                        &:hover {
+                            transition: 0.3s;
+                            opacity: 0.8;
+                        }
+                    }
+                }
+            }
+            .button__signup {
+                border: 1px solid $blue-color;
+                margin: auto 0 auto auto;
+                color: $blue-color;
+                padding: 15px 20px;
+                border-radius: 30px;
+                font-size: 12px;
+                cursor: pointer;
+                user-select: none;
+                font-weight: 500;
+                box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.5);
+                transition: 0.3s;
+                font-weight: 600;
+                &:hover {
+                    opacity: 0.9;
+                    transition: 0.3s;
+                }
+            }
+            .button__nav {
+                display: none;
+            }
+        }
+        @media screen and (max-width: 880px) {
+            margin: 0 20px;
+            .header__title {
+                margin: auto 0;
+                margin-right: 40px;
+                .purple__circle {
+                    background-color: #DCD9FF;
+                    width: 30px;
+                    height: 30px;
+                    border-radius: 100%;
+                    position: absolute;
+                    z-index: -1;
+                    margin-top: 10px;
+                }
+                .zora__text {
+                    margin-left: 5px;
+                    font-size: 30px;
+                    font-family: "Roboto-Bold";
+                    cursor: pointer;
+                    user-select: none;
+                }
+            }
+            .nav__item {
+                display: none;
+            }
+            .subcontent {
+                display: none;
+            }
+            .button__signup {
+                display: none;
+            }
+            .button__nav {
+                margin: auto 0 auto auto;
+                cursor: pointer;
+                i {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+    .menu__dropdown {
+        position: absolute;
+        background-color: #333;
+        color: white;
+        width: 100%;
+        margin-top: 10px;
+        .nav__item {
+            font-size: 16px;
+            font-weight: 600;
+            padding: 10px;
+            text-align: center;
+            cursor: pointer;
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+        @media screen and (min-width: 880px) {
+            display: none;
+        }
+    }
+}

@@ -1,0 +1,155 @@
+@import '../../css/constant.scss';
+
+.LoginModal {
+    color: black;
+    .wallet {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        border-radius: 30px;
+        padding: 15px 0;
+        user-select: none;
+        margin-bottom: 20px;
+        font-weight: 500;
+        box-shadow: 0 1px 3px 0px rgba(0, 0, 0, 0.5);
+        transition: 0.3s;
+        cursor: pointer;
+        &:hover {
+            background: #dee4ff;
+            transition: 0.3s;
+        }
+        .wallet__text {
+            font-size: 16px;
+            margin: auto 0;
+            padding-left: 30px;
+        }
+        img {
+            padding-right: 30px;
+            width: 30px;
+        }
+    }
+    .warning__text {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    .install__button {
+        background: $dark-blue;
+        color: white;
+        font-weight: 600;
+        font-size: 16px;
+        padding: 15px 0;
+        text-align: center;
+        border-radius: 30px;
+        transition: 0.3s;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+            opacity: 0.9;
+            transition: 0.3s;
+        }
+    }
+}
+
+.ant-modal {
+    border-radius: 12px;
+    box-sizing: border-box;
+    color: hsla(0,0%,100%,.85);
+    font-size: 14px;
+    font-variant: tabular-nums;
+    line-height: 1.5715;
+    list-style: none;
+    font-feature-settings: tnum;
+    position: relative;
+    top: 100px;
+    width: auto;
+    max-width: calc(100vw - 32px);
+    margin: 0 auto;
+    padding: 0 0 24px;
+}
+
+.ant-modal-header {
+    border: solid 1px #dbe7ff;
+    background-color: #f1f6ff;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    padding: 16px 24px;
+    color: hsla(0,0%,100%,.85);
+}
+
+.ant-modal-title {
+    letter-spacing: .44px;
+    color: #141d38;
+    height: 40px;
+    font-weight: 600;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+
+.ant-modal-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+    padding: 0;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    background: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    transition: color .3s;
+    color: black;
+}
+
+.ant-modal-close-x {
+    display: flex;
+    align-items: center;
+    width: 50px;
+    height: 70px;
+    font-size: 16px;
+    font-style: normal;
+    line-height: 56px;
+    text-align: center;
+    text-transform: none;
+    text-rendering: auto;
+}
+
+.ant-modal-content {
+  background: #fff;
+  border-radius: 22px;
+  color: #000;
+}
+
+.ant-modal-mask {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    background-color: rgba(0,0,0,.45);
+}
+
+.ant-modal-wrap {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    outline: 0;
+    -webkit-overflow-scrolling: touch;
+}
+
+.ant-modal-body {
+    padding: 24px;
+    font-size: 14px;
+    line-height: 1.5715;
+    word-wrap: break-word;
+}
