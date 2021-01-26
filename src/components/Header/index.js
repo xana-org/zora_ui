@@ -32,7 +32,7 @@ class Header extends Component {
                         <div className="purple__circle"/>
                         <div className="zora__text">Zora</div>
                     </div>
-                    <Link className="nav__item" to="products" spy={true} smooth={true}>Scores</Link>
+                    <Link className="nav__item" to="products" spy={true} smooth={true}>About</Link>
                     <Link className="nav__item" to="pricing" spy={true} smooth={true}>Credit</Link>
                     <Link className="nav__item" to="resources" spy={true} smooth={true}>Privacy</Link>
                     <div className="subcontent">
@@ -63,7 +63,7 @@ class Header extends Component {
                     </div>
                 </div>
                 {this.state.showMenu && <div className="menu__dropdown">
-                    <div className="nav__item">Scores</div>
+                    <div className="nav__item">About</div>
                     <div className="nav__item">Credit</div>
                     <div className="nav__item">Privacy</div>
                 </div>}
