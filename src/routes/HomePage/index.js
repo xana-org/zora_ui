@@ -55,14 +55,14 @@ class HomePage extends Component {
                     </div> */}
                 </div>
                 <div className="on__chain">
-                    <div className="pink__text">Blockchain Credit is Here</div>
+                    <div className="pink__text">Blockchain Credit is Born</div>
                     <div className="black__text">No collateral needed</div>
                     <div className="seperator"/>
-                    <div className="description">Our innovative algorigthm provides real-time updates.</div>
-                    <div className="button__show" onClick={this.onSeeMyScore}>See my scores</div>
+                    <div className="description">Our innovative algorithm provides real-time updates.</div>
+                    <div className="button__show" onClick={this.onSeeMyScore}>Get my score</div>
                 </div>
                 <div className="banner__block">
-                    <div className="pink__text">Your credit scores and more</div>
+                    <div className="pink__text">You blockchain credit and more</div>
                     <div className="seperator"/>
                     <div className="banner__container">
                         <div className="banner__box">
@@ -104,21 +104,21 @@ class HomePage extends Component {
                     </div>
                 </div>
                 <div className="follow__container">
-                    <div className="pink__text">Fllow the crypto</div>
+                    <div className="pink__text">Get crypto instantly</div>
                     <div className="seperator"/>
                     <div className="follow__box">
                         <div className="follow__image">
                             <img src={Img_Banner4} alt=""/>
                         </div>
                         <div className="follow__contnet">
-                            <div className="follow__title">Is there unclaimed money in your name?</div>
-                            <div className="follow__description">There's an easy way to find out.</div>
+                            <div className="follow__title">Based on your account history</div>
+                            <div className="follow__description">You can receive Zora</div>
                             <div className="button__doit" onClick={this.onSeeMyScore}>Let's do it</div>
                         </div>
                     </div>
                 </div>
                 <div className="data__container">
-                    <div className="pink__text">We treat your data as if it was our own</div>
+                    <div className="pink__text">We use on-chain data to securely rate your account</div>
                     <div className="seperator"/>
                     <div className="data__box">
                         <div className="data__content">
@@ -126,14 +126,14 @@ class HomePage extends Component {
                                 <img src={Img_Banner5} alt=""/>
                             </div>
                             <div className="data__title">Security</div>
-                            <div className="data__description">We use 128-bit encryption to protect the transmission of your data to our site.</div>
+                            <div className="data__description">We use SSL on our web interface to securely transmit data</div>
                         </div>
                         <div className="data__content">
                             <div className="data__img">
                                 <img src={Img_Banner6} alt=""/>
                             </div>
                             <div className="data__title">Privacy</div>
-                            <div className="data__description">We do not share your personal information with unaffiliated third parties for their own marketing purposes.</div>
+                            <div className="data__description">Our ZK-Snark Technology is leveraged to confidentially provide credit reporting</div>
                         </div>
                     </div>
                 </div>
