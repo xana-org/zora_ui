@@ -32,9 +32,9 @@ class Header extends Component {
                         <div className="purple__circle"/>
                         <div className="zora__text">Zora</div>
                     </div>
-                    <Link className="nav__item" to="products" spy={true} smooth={true}>Products</Link>
-                    <Link className="nav__item" to="pricing" spy={true} smooth={true}>Pricing</Link>
-                    <Link className="nav__item" to="resources" spy={true} smooth={true}>Resources</Link>
+                    <Link className="nav__item" to="products" spy={true} smooth={true}>Scores</Link>
+                    <Link className="nav__item" to="pricing" spy={true} smooth={true}>Credit</Link>
+                    <Link className="nav__item" to="resources" spy={true} smooth={true}>Privacy</Link>
                     <div className="subcontent">
                         <div className="item" onClick={() => window.open("https://twitter.com/z0racles")}>
                             <img src={Img_Twiter} alt="" className="social"/>
@@ -63,9 +63,9 @@ class Header extends Component {
                     </div>
                 </div>
                 {this.state.showMenu && <div className="menu__dropdown">
-                    <div className="nav__item">Products</div>
-                    <div className="nav__item">Pricing</div>
-                    <div className="nav__item">Resources</div>
+                    <div className="nav__item">Scores</div>
+                    <div className="nav__item">Credit</div>
+                    <div className="nav__item">Privacy</div>
                 </div>}
             </div>
         )
