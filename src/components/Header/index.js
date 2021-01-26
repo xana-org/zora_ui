@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { Link } from 'react-scroll';
 import { updateLoginModalVisible } from '../../store';
 import { shortHash } from '../../utils/_';
 
@@ -31,10 +32,9 @@ class Header extends Component {
                         <div className="purple__circle"/>
                         <div className="zora__text">Zora</div>
                     </div>
-                    <div className="nav__item">Products</div>
-                    <div className="nav__item">Pricing</div>
-                    <div className="nav__item">Resources</div>
-                    <div className="nav__item">Company</div>
+                    <Link className="nav__item" to="products" spy={true} smooth={true}>Products</Link>
+                    <Link className="nav__item" to="pricing" spy={true} smooth={true}>Pricing</Link>
+                    <Link className="nav__item" to="resources" spy={true} smooth={true}>Resources</Link>
                     <div className="subcontent">
                         <div className="item" onClick={() => window.open("https://twitter.com/z0racles")}>
                             <img src={Img_Twiter} alt="" className="social"/>
@@ -66,7 +66,6 @@ class Header extends Component {
                     <div className="nav__item">Products</div>
                     <div className="nav__item">Pricing</div>
                     <div className="nav__item">Resources</div>
-                    <div className="nav__item">Company</div>
                 </div>}
             </div>
         )

@@ -28,33 +28,8 @@ class HomePage extends Component {
                 <div className="back__style">
                     <img src={Img_Star1} alt="" className="star-back"/>
                     <img src={Img_Star2} alt="" className="star1"/>
-                    {/* <div className="circle1"/>
-                    <div className="circle2"/>
-                    <div className="circle3"/>
-                    <div className="credit__score">
-                        <div className="circle">
-                            <div className="rect">
-                                <div className="dot"/>
-                            </div>
-                        </div>
-                        <div className="detail">
-                            <div className="text">Credit Score</div>
-                            <div className="score">600</div>
-                        </div>
-                    </div>
-                    <div className="credit__score second">
-                        <div className="circle">
-                            <div className="rect">
-                                <div className="dot"/>
-                            </div>
-                        </div>
-                        <div className="detail">
-                            <div className="text">Credit Score</div>
-                            <div className="score">760</div>
-                        </div>
-                    </div> */}
                 </div>
-                <div className="on__chain">
+                <div className="on__chain" id="products">
                     <div className="pink__text">Blockchain Credit is Born</div>
                     <div className="black__text">No collateral needed</div>
                     <div className="seperator"/>
@@ -103,7 +78,7 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="follow__container">
+                <div className="follow__container" id="pricing">
                     <div className="pink__text">Get crypto instantly</div>
                     <div className="seperator"/>
                     <div className="follow__box">
@@ -117,7 +92,7 @@ class HomePage extends Component {
                         </div>
                     </div>
                 </div>
-                <div className="data__container">
+                <div className="data__container" id="resources">
                     <div className="pink__text">We use on-chain data to securely rate your account</div>
                     <div className="seperator"/>
                     <div className="data__box">
