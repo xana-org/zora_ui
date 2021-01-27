@@ -31,6 +31,7 @@ class Header extends Component {
                     <div className="header__title">
                         <div className="purple__circle"/>
                         <div className="zora__text">Zora</div>
+                        <div className="beta">(beta)</div>
                     </div>
                     <Link className="nav__item" to="products" spy={true} smooth={true}>About</Link>
                     <Link className="nav__item" to="pricing" spy={true} smooth={true}>Credit</Link>

@@ -20,7 +20,9 @@
             }
             .header__title {
                 margin: auto 0;
-                margin-right: 40px;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: row;
                 .purple__circle {
                     background-color: #DCD9FF;
                     width: 30px;
@@ -31,12 +33,15 @@
                     margin-top: 10px;
                 }
                 .zora__text {
-                    margin-left: 5px;
                     font-size: 30px;
                     font-family: "Roboto-Bold";
                     cursor: pointer;
                     user-select: none;
                     color: black;
+                    margin: auto 0 auto 5px;
+                }
+                .beta {
+                    margin-top: auto;
                 }
             }
             .nav__item {
@@ -113,7 +118,9 @@
             margin: 0 20px;
             .header__title {
                 margin: auto 0;
-                margin-right: 40px;
+                margin-right: 20px;
+                display: flex;
+                flex-direction: row;
                 .purple__circle {
                     background-color: #DCD9FF;
                     width: 30px;
@@ -129,6 +136,9 @@
                     font-family: "Roboto-Bold";
                     cursor: pointer;
                     user-select: none;
+                }
+                .beta {
+                    margin-top: auto;
                 }
             }
             .nav__item {
