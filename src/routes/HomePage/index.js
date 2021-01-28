@@ -33,7 +33,7 @@ class HomePage extends Component {
                     <div className="pink__text">Blockchain Credit Scores</div>
                     <div className="black__text">Free real-time reporting</div>
                     <div className="seperator"/>
-                    <div className="description">Our innovative algorithm provides real-time updates.</div>
+                    <div className="description">Our unique algorithm assess on-chain creditworthiness.</div>
                     <div className="button__show" onClick={this.onSeeMyScore}>Get my score</div>
                 </div>
                 <div className="banner__block">
