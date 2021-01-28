@@ -30,14 +30,14 @@ class HomePage extends Component {
                     <img src={Img_Star2} alt="" className="star1"/>
                 </div>
                 <div className="on__chain" id="products">
-                    <div className="pink__text">Blockchain Credit is Born</div>
-                    <div className="black__text">No collateral needed</div>
+                    <div className="pink__text">Blockchain Credit Scores</div>
+                    <div className="black__text">Free real-time reporting</div>
                     <div className="seperator"/>
                     <div className="description">Our innovative algorithm provides real-time updates.</div>
                     <div className="button__show" onClick={this.onSeeMyScore}>Get my score</div>
                 </div>
                 <div className="banner__block">
-                    <div className="pink__text">You blockchain credit and more</div>
+                    <div className="pink__text">Your transaction history and more</div>
                     <div className="seperator"/>
                     <div className="banner__container">
                         <div className="banner__box">
@@ -50,7 +50,6 @@ class HomePage extends Component {
                             <div className="banner__image">
                                 <img src={Img_Banner1} alt=""/>
                             </div>
-                            <div className="banner__description">Get alerted when there's an important change on your reports.</div>
                         </div>
                         <div className="banner__box">
                             <div className="item__no">
@@ -62,7 +61,6 @@ class HomePage extends Component {
                             <div className="banner__image">
                                 <img src={Img_Banner2} alt=""/>
                             </div>
-                            <div className="banner__description">Learn what affects your credit scores and what you can do to improve them.</div>
                         </div>
                         <div className="banner__box last">
                             <div className="item__no">
@@ -74,7 +72,6 @@ class HomePage extends Component {
                             <div className="banner__image">
                                 <img src={Img_Banner3} alt=""/>
                             </div>
-                            <div className="banner__description">See personalized recommendations for ways to use your credit more wisely.</div>
                         </div>
                     </div>
                 </div>
@@ -93,7 +90,7 @@ class HomePage extends Component {
                     </div>
                 </div>
                 <div className="data__container" id="resources">
-                    <div className="pink__text">We use on-chain data to securely rate your account</div>
+                    <div className="pink__text">Oracle data analyzed to provide confidential credit reporting</div>
                     <div className="seperator"/>
                     <div className="data__box">
                         <div className="data__content">
