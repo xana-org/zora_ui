@@ -119,7 +119,7 @@ class Dashboard extends Component {
                         <div className="close__dialog">
                             <i className="fa fa-times"></i>
                         </div>
-                        <div className="dialog__text">Zora Credit Lines</div>
+                        <div className="dialog__text">Zora Credit Lines(coming soon)</div>
                         <div className="button__receive">Receive instant crypto credit</div>
                     </div>
                     <div className="chart-block">
@@ -130,7 +130,7 @@ class Dashboard extends Component {
                                 {this.state.rating === -1?'Loading...':Number.parseFloat(this.state.ethBalance).toFixed(2)}
                             </p>
                             <div className="credit__text">
-                                Balance
+                                Ethereum Balance
                             </div>
                         </div>
                         <div className="outer">
@@ -140,7 +140,7 @@ class Dashboard extends Component {
                                 {this.state.rating === -1?'Loading...':Number.parseFloat(this.state.rating).toFixed(2)}
                             </p>
                             <div className="credit__text">
-                                Credit Rating
+                                Crypto Credit Score
                             </div>
                         </div>
                     </div>
