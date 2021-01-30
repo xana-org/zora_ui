@@ -7,6 +7,42 @@
             width: calc(100% - 40px);
             margin: 0 20px;
         }
+        .dialog {
+            border-radius: 12px;
+            box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
+            background-color: #ffffff;
+            padding: 20px 40px;
+            margin-bottom: 30px;
+            .close__dialog {
+                position: relative;
+                right: 0;
+                float: right;
+            }
+            .dialog__text {
+                text-align: center;
+                font-size: 24px;
+                font-weight: bold;
+                margin-bottom: 20px;
+            }
+            .button__receive {
+                width: 280px;
+                background: #3391DF;
+                color: white;
+                text-align: center;
+                font-weight: bold;
+                padding: 15px;
+                border-radius: 10px;
+                user-select: none;
+                cursor: pointer;
+                transition: 0.3s;
+                margin: 0 auto;
+                &:hover {
+                    opacity: 0.9;
+                    transition: 0.3s;
+                }
+            }
+
+        }
         .chart-block {
             border-radius: 12px;
             box-shadow: 0 2px 17px 0 rgba(0, 0, 0, 0.1);
@@ -22,9 +58,11 @@
                 position: relative;
                 width: 400px;
                 height: 320px;
+                margin: 0 50px;
                 @media screen and (max-width: 1240px) {
                     width: 100%;
                     max-width: 400px;
+                    margin: 0;
                 }
                 canvas {
                     position: absolute;
@@ -43,22 +81,6 @@
                     font-size: 14px;
                     margin-top: 200px;
 
-                }
-            }
-            .detail {
-                margin: auto 0 auto 40px;
-                .detail__row {
-                    display: flex;
-                    flex-direction: row;
-                    margin-bottom: 20px;
-                    .text {
-                        font-weight: bold;
-                        font-size: 18px;
-                    }
-                    .value {
-                        margin-left: 10px;
-                        font-size: 18px;
-                    }
                 }
             }
         }

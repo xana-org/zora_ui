@@ -15,22 +15,25 @@ class Dashboard extends Component {
             txCount: 0,
         }
     }
-    async initilize(addr) {
-        let res = await getScore("https://cors-anywhere.herokuapp.com/http://gov.zoracles.com/rating/" + addr);
+    drawChart(res, id1, id2) {
         var options1 = {
             type: 'doughnut',
             data: {
-                labels: ["Red", "Orange", "Green"],
+                labels: ["blue", "Orange", "Green"],
                 datasets: [
                     {
                         label: '# of Votes',
-                        data: [33, 33, 33],
+                        data: [45, 12, 12, 12, 18],
                         backgroundColor: [
-                            'rgba(231, 76, 60, 1)',
-                            'rgba(255, 164, 46, 1)',
-                            'rgba(46, 204, 113, 1)'
+                            '#3391DF',
+                            '#3391DF',
+                            '#3391DF',
+                            '#3391DF',
+                            '#3391DF'
                         ],
                         borderColor: [
+                            'rgba(255, 255, 255 ,1)',
+                            'rgba(255, 255, 255 ,1)',
                             'rgba(255, 255, 255 ,1)',
                             'rgba(255, 255, 255 ,1)',
                             'rgba(255, 255, 255 ,1)'
@@ -51,11 +54,12 @@ class Dashboard extends Component {
                 cutoutPercentage: 92
             }
         }
-          
-        var ctx1 = document.getElementById('chartJSContainer').getContext('2d');
+        
+        var ctx1 = document.getElementById(id1).getContext('2d');
         new Chart(ctx1, options1);
-        const score = Math.floor(res.result.rating * 10);
+        let score = 0;
         if (res && res.result) {
+            score = Math.floor(res.result.rating * 10);
             this.setState({
                 rating: res.result.rating,
                 ethBalance: res.result.ethBalance,
@@ -94,12 +98,14 @@ class Dashboard extends Component {
                 }
             }
         }
-          
-        var ctx2 = document.getElementById('secondContainer').getContext('2d');
+        
+        var ctx2 = document.getElementById(id2).getContext('2d');
         new Chart(ctx2, options2);
-        this.setState({
-            myChart: ctx2            
-        });
+    }
+    async initilize(addr) {
+        let res = await getScore("https://cors-anywhere.herokuapp.com/http://gov.zoracles.com/rating/" + addr);
+        this.drawChart(res, "chartJSContainer", "secondContainer");
+        this.drawChart(res, "chartJSContainer1", "secondContainer1");
     }
     componentDidMount() {
         if (!this.props.address) this.props.history.push('/');
@@ -109,25 +115,32 @@ class Dashboard extends Component {
         return (
             <div className="Dashboard">
                 <div className="content">
+                    <div className="dialog">
+                        <div className="close__dialog">
+                            <i className="fa fa-times"></i>
+                        </div>
+                        <div className="dialog__text">Zora Credit Lines</div>
+                        <div className="button__receive">Receive instant crypto credit</div>
+                    </div>
                     <div className="chart-block">
                         <div className="outer">
                             <canvas id="chartJSContainer" width="600" height="400"></canvas>
                             <canvas id="secondContainer" width="600" height="400"></canvas>
                             <p className="percent">
+                                {this.state.rating === -1?'Loading...':Number.parseFloat(this.state.ethBalance).toFixed(2)}
+                            </p>
+                            <div className="credit__text">
+                                Balance
+                            </div>
+                        </div>
+                        <div className="outer">
+                            <canvas id="chartJSContainer1" width="600" height="400"></canvas>
+                            <canvas id="secondContainer1" width="600" height="400"></canvas>
+                            <p className="percent">
                                 {this.state.rating === -1?'Loading...':Number.parseFloat(this.state.rating).toFixed(2)}
                             </p>
                             <div className="credit__text">
-                                Your Credit Score
-                            </div>
-                        </div>
-                        <div className="detail">
-                            <div className="detail__row">
-                                <div className="text">ETH balance: </div>
-                                <div className="value">{this.state.ethBalance}</div>
-                            </div>
-                            <div className="detail__row">
-                                <div className="text">Total tx Count: </div>
-                                <div className="value">{this.state.txCount}</div>
+                                Credit Rating
                             </div>
                         </div>
                     </div>
