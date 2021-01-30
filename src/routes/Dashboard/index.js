@@ -13,6 +13,7 @@ class Dashboard extends Component {
             rating: -1,
             ethBalance: 0,
             txCount: 0,
+            loaded: false,
         }
     }
     drawChart(res, id1, id2) {
@@ -55,7 +56,7 @@ class Dashboard extends Component {
             }
         }
         
-        var ctx1 = document.getElementById(id1).getContext('2d');
+        var ctx1 = document.getElementById(id1)?.getContext('2d');
         new Chart(ctx1, options1);
         let score = 0;
         if (res && res.result) {
@@ -109,7 +110,14 @@ class Dashboard extends Component {
     }
     componentDidMount() {
         if (!this.props.address) this.props.history.push('/');
-        this.initilize(this.props.address);
+    }
+    componentDidUpdate() {
+        if (!this.state.loaded && document.getElementById("chartJSContainer")?.getContext('2d')) {
+            this.setState({
+                loaded: true
+            })
+            this.initilize(this.props.address);
+        }
     }
     render() {
         return (
