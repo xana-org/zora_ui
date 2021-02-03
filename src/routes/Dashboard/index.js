@@ -127,7 +127,10 @@ class Dashboard extends Component {
                         <div className="close__dialog">
                             <i className="fa fa-times"></i>
                         </div>
-                        <div className="dialog__text">Zora Credit Lines<span>(coming soon)</span></div>
+                        <div className="dialog__text">
+                            <div>Zora Credit Lines</div>
+                            <span>(coming soon)</span>
+                        </div>
                         <div className="button__receive">Receive instant crypto credit</div>
                     </div>
                     <div className="chart-block">
