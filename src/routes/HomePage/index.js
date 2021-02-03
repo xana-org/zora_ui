@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
-import Lottie from 'react-lottie';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { updateLoginModalVisible } from '../../store';
 import { Controller, Scene } from 'react-scrollmagic';
+import SquareParticle from "./SquareParticle";
 import './index.scss';
 
 import Img_Banner1  from '../../assets/images/homepage/1.png';
@@ -13,10 +13,7 @@ import Img_Banner3  from '../../assets/images/homepage/3.png';
 import Img_Banner4  from '../../assets/images/homepage/4.png';
 import Img_Banner5  from '../../assets/images/homepage/5.svg';
 import Img_Banner6  from '../../assets/images/homepage/6.png';
-import Img_Star1    from '../../assets/images/homepage/stars.png';
-import Img_Star2    from '../../assets/images/homepage/star1.svg';
-import * as anim1   from '../../assets/animations/anim1.json';
-import * as anim2   from '../../assets/animations/anim2.json';
+
 
 class HomePage extends Component {
     componentDidUpdate() {
@@ -27,47 +24,20 @@ class HomePage extends Component {
         else this.props.updateLoginModalVisible(1)
     }
     render() {
-        const anim1Opition = {
-            loop: true,
-            autoplay: true, 
-            animationData: anim1.default,
-            rendererSettings: {
-              preserveAspectRatio: 'xMidYMid slice'
-            }
-        };
-        const anim2Opition = {
-            loop: true,
-            autoplay: true, 
-            animationData: anim2.default,
-            rendererSettings: {
-              preserveAspectRatio: 'xMidYMid slice'
-            }
-        };
         return (
             <div className="HomePage">
-                <div className="back__style">
-                    <img src={Img_Star1} alt="" className="star-back"/>
-                    <img src={Img_Star2} alt="" className="star1"/>
-                </div>
-                <div className="on__chain fadeInDown" id="products">
-                    <Lottie options={anim1Opition}
-                            height={400}
-                            width={400}
-                            isStopped={false}
-                            isPaused={false}/>
-                    <div className="texts">
+                <div className="space"/>
+                <div className="on__chain">
+                    <SquareParticle/>
+                    <div className="texts fadeInDown" id="products">
                         <div className="pink__text">Blockchain Credit Scores</div>
                         <div className="black__text">Free real-time reporting</div>
                         <div className="seperator"/>
                         <div className="description">Our unique algorithm assess on-chain creditworthiness.</div>
                         <div className="button__show" onClick={this.onSeeMyScore}>Get my score</div>
                     </div>
-                    <Lottie options={anim2Opition}
-                            height={400}
-                            width={400}
-                            isStopped={false}
-                            isPaused={false}/>
                 </div>
+                <div className="space1"/>
                 <div id="trigger1"/>
                 <Controller>
                     <Scene classToggle="trigger1" triggerElement="#trigger1">
