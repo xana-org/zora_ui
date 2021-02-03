@@ -38,10 +38,10 @@ class HomePage extends Component {
                     </div>
                 </div>
                 <div className="space1"/>
-                <div id="trigger1"/>
+                {/* <div id="trigger1"/>
                 <Controller>
                     <Scene classToggle="trigger1" triggerElement="#trigger1">
-                        {(progress, event) => (
+                        {(progress, event) => ( */}
                             <div className="banner__block">
                                 <div className="pink__text">Your transaction history and more</div>
                                 <div className="seperator"/>
@@ -81,9 +81,9 @@ class HomePage extends Component {
                                     </div>
                                 </div>
                             </div>
-                        )}
+                        {/* )}
                     </Scene>
-                </Controller> 
+                </Controller>  */}
                 <div id="trigger2"/>
                 <Controller>
                     <Scene classToggle="trigger1" triggerElement="#trigger2">
