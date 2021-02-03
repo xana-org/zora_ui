@@ -39,7 +39,7 @@ export default () => (
                     value: ["#5984ff", "#00ff00"]
                 },
                 size: {
-                    value: 60,
+                    value: 40,
                     random: true
                 },
                 move: {

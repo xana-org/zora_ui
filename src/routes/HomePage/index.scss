@@ -32,27 +32,25 @@
         .pink__text {
             color: $dark-blue;
             text-align: center;
-            font-weight: 600;
             font-size: 50px;
         }
         .black__text {
             text-align: center;
-            font-weight: 600;
             font-size: 46px;
-            margin: 40px 0;
+            margin: 20px 0;
         }
         .seperator {
             width: 50px;
             height: 5px;
             background-color: $dark-blue;
-            margin: 40px auto;
+            margin: 20px auto;
         }
         .description {
             text-align: center;
-            font-weight: 600;
-            font-size: 26px;
+            font-size: 22px;
             margin-bottom: 50px;
             color: gray;
+            letter-spacing: 0.1px;
         }
         .button__show {
             background-color: $dark-blue;
@@ -65,7 +63,6 @@
             color: white;
             cursor: pointer;
             user-select: none;
-            font-weight: 500;
             box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
             &:hover {
@@ -153,12 +150,10 @@
                     }
                     .banner__title {
                         font-size: 42px;
-                        font-weight: 600;
                         text-align: center;
                     }
                     .banner__description {
                         font-size: 18px;
-                        font-weight: 400;
                         text-align: center;
                         width: 300px;
                     }
@@ -185,13 +180,11 @@
                 margin: auto 0;
                 .follow__title {
                     font-size: 28px;
-                    font-weight: 600;
                     margin-bottom: 20px;
 
                 }
                 .follow__description {
                     font-size: 24px;
-                    font-weight: 400;
                     margin: 30px 0;
                 }
                 .button__doit {
@@ -204,7 +197,6 @@
                     text-align: center;
                     cursor: pointer;
                     user-select: none;
-                    font-weight: 500;
                     box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
                     transition: 0.3s;
                     &:hover {
@@ -238,13 +230,11 @@
                 }
                 .data__title {
                     font-size: 28px;
-                    font-weight: 600;
                     margin: 40px 0;
                     text-align: center;
                 }
                 .data__description {
                     font-size: 24px;
-                    font-weight: 400;
                     margin-bottom: 20px;
                     text-align: center;
                 }
@@ -261,12 +251,10 @@
         .pink__text {
             color: $dark-blue;
             text-align: center;
-            font-weight: 600;
             font-size: 40px;
         }
         .black__text {
             text-align: center;
-            font-weight: 600;
             font-size: 36px;
             margin: 40px 0;
         }
@@ -278,7 +266,6 @@
         }
         .description {
             text-align: center;
-            font-weight: 600;
             font-size: 26px;
             margin-bottom: 50px;
         }
@@ -293,7 +280,6 @@
             color: white;
             cursor: pointer;
             user-select: none;
-            font-weight: 500;
             box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
             transition: 0.3s;
             &:hover {
@@ -368,12 +354,10 @@
                     }
                     .banner__title {
                         font-size: 42px;
-                        font-weight: 600;
                         text-align: center;
                     }
                     .banner__description {
                         font-size: 18px;
-                        font-weight: 400;
                         text-align: center;
                         width: 300px;
                     }
@@ -398,14 +382,12 @@
                 margin-top: 40px;
                 .follow__title {
                     font-size: 28px;
-                    font-weight: 600;
                     margin-bottom: 20px;
                     text-align: center;
 
                 }
                 .follow__description {
                     font-size: 24px;
-                    font-weight: 400;
                     margin: 30px 0;
                     text-align: center;
                 }
@@ -419,7 +401,6 @@
                     text-align: center;
                     cursor: pointer;
                     user-select: none;
-                    font-weight: 500;
                     box-shadow: 0 2px 10px 1px rgba(0, 0, 0, 0.5);
                     transition: 0.3s;
                     &:hover {
@@ -450,13 +431,11 @@
                 }
                 .data__title {
                     font-size: 28px;
-                    font-weight: 600;
                     margin: 40px 0;
                     text-align: center;
                 }
                 .data__description {
                     font-size: 24px;
-                    font-weight: 400;
                     margin-bottom: 20px;
                     text-align: center;
                 }
