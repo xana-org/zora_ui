@@ -5,6 +5,10 @@
         z-index: -1;
         .on__chain {
            padding: 200px 0;
+           -webkit-animation-duration: 2s;
+           animation-duration: 2s;
+           -webkit-animation-fill-mode: both;
+           animation-fill-mode: both;
         }
         .pink__text {
             color: $dark-blue;
@@ -71,6 +75,8 @@
             justify-content: center;
             padding: 100px 0;
             background-color: #f0f5f9;
+            opacity: 0;
+            transition: 0.3s;
             .banner__container {
                 display: flex;
                 flex-direction: row;
@@ -143,6 +149,8 @@
         }
         .follow__container {
             padding: 100px 0;
+            opacity: 0;
+            transition: 0.3s;
         }
         .follow__box {
             display: flex;
@@ -191,6 +199,8 @@
         .data__container {
             padding: 100px 0;
             background-color: #f0f5f9;
+            opacity: 0;
+            transition: 0.3s;
         }
         .data__box {
             display: flex;
@@ -436,4 +446,46 @@
             }
         }
     }
+}
+
+.sceffect {
+    background: red;
+}
+
+
+@-webkit-keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       -webkit-transform: translateY(-60px);
+    }
+    100% {
+       opacity: 1;
+       -webkit-transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDown {
+    0% {
+       opacity: 0;
+       transform: translateY(-60px);
+    }
+    100% {
+       opacity: 1;
+       transform: translateX(0);
+    }
+}
+
+.fadeInDown {
+   -webkit-animation-name: fadeInDown;
+   animation-name: fadeInDown;
+}
+.trigger1 {
+    opacity: 1 !important;
+    -webkit-animation-name: fadeInDown;
+    animation-name: fadeInDown;
+    transition: 0.3s;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
 }

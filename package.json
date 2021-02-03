@@ -20,8 +20,10 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.1",
     "react-scroll": "^1.8.1",
+    "react-scrollmagic": "^2.2.0",
     "redux": "^4.0.5",
     "sass-loader": "^10.1.1",
+    "scrollmagic": "^2.0.8",
     "style-loader": "^2.0.0",
     "web-vitals": "^0.2.4"
   },

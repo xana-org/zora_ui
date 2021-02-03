@@ -3,6 +3,7 @@ import { compose } from 'redux';
 import { withRouter } from 'react-router';
 import { connect } from 'react-redux';
 import { updateLoginModalVisible } from '../../store';
+import { Controller, Scene } from 'react-scrollmagic';
 import './index.scss';
 
 import Img_Banner1  from '../../assets/images/homepage/1.png';
@@ -29,86 +30,107 @@ class HomePage extends Component {
                     <img src={Img_Star1} alt="" className="star-back"/>
                     <img src={Img_Star2} alt="" className="star1"/>
                 </div>
-                <div className="on__chain" id="products">
+                <div className="on__chain fadeInDown" id="products">
                     <div className="pink__text">Blockchain Credit Scores</div>
                     <div className="black__text">Free real-time reporting</div>
                     <div className="seperator"/>
                     <div className="description">Our unique algorithm assess on-chain creditworthiness.</div>
                     <div className="button__show" onClick={this.onSeeMyScore}>Get my score</div>
                 </div>
-                <div className="banner__block">
-                    <div className="pink__text">Your transaction history and more</div>
-                    <div className="seperator"/>
-                    <div className="banner__container">
-                        <div className="banner__box">
-                            <div className="item__no">
-                                <div className="back">
-                                    <div className="text">1</div>
+                <div id="trigger1"/>
+                <Controller>
+                    <Scene classToggle="trigger1" triggerElement="#trigger1">
+                        {(progress, event) => (
+                            <div className="banner__block">
+                                <div className="pink__text">Your transaction history and more</div>
+                                <div className="seperator"/>
+                                <div className="banner__container">
+                                    <div className="banner__box">
+                                        <div className="item__no">
+                                            <div className="back">
+                                                <div className="text">1</div>
+                                            </div>
+                                        </div>
+                                        <div className="banner__title">Ratings</div>
+                                        <div className="banner__image">
+                                            <img src={Img_Banner1} alt=""/>
+                                        </div>
+                                    </div>
+                                    <div className="banner__box">
+                                        <div className="item__no">
+                                            <div className="back">
+                                                <div className="text">2</div>
+                                            </div>
+                                        </div>
+                                        <div className="banner__title">Data</div>
+                                        <div className="banner__image">
+                                            <img src={Img_Banner2} alt=""/>
+                                        </div>
+                                    </div>
+                                    <div className="banner__box last">
+                                        <div className="item__no">
+                                            <div className="back">
+                                                <div className="text">3</div>
+                                            </div>
+                                        </div>
+                                        <div className="banner__title">Credit</div>
+                                        <div className="banner__image">
+                                            <img src={Img_Banner3} alt=""/>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="banner__title">Ratings</div>
-                            <div className="banner__image">
-                                <img src={Img_Banner1} alt=""/>
-                            </div>
-                        </div>
-                        <div className="banner__box">
-                            <div className="item__no">
-                                <div className="back">
-                                    <div className="text">2</div>
+                        )}
+                    </Scene>
+                </Controller> 
+                <div id="trigger2"/>
+                <Controller>
+                    <Scene classToggle="trigger1" triggerElement="#trigger2">
+                        {(progress, event) => (
+                            <div className="follow__container" id="pricing">
+                                <div className="pink__text">Get crypto instantly</div>
+                                <div className="seperator"/>
+                                <div className="follow__box">
+                                    <div className="follow__image">
+                                        <img src={Img_Banner4} alt=""/>
+                                    </div>
+                                    <div className="follow__contnet">
+                                        <div className="follow__title">Based on your account history</div>
+                                        <div className="follow__description">You can receive Zora</div>
+                                        <div className="button__doit" onClick={this.onSeeMyScore}>Let's do it</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="banner__title">Data</div>
-                            <div className="banner__image">
-                                <img src={Img_Banner2} alt=""/>
-                            </div>
-                        </div>
-                        <div className="banner__box last">
-                            <div className="item__no">
-                                <div className="back">
-                                    <div className="text">3</div>
+                        )}
+                    </Scene>
+                </Controller> 
+                <div id="trigger3"/>
+                <Controller>
+                    <Scene classToggle="trigger1" triggerElement="#trigger3">
+                        {(progress, event) => (
+                            <div className="data__container" id="resources">
+                                <div className="pink__text">Oracle data analyzed to provide confidential credit reporting</div>
+                                <div className="seperator"/>
+                                <div className="data__box">
+                                    <div className="data__content">
+                                        <div className="data__img">
+                                            <img src={Img_Banner5} alt=""/>
+                                        </div>
+                                        <div className="data__title">Security</div>
+                                        <div className="data__description">We use SSL on our web interface to securely transmit data</div>
+                                    </div>
+                                    <div className="data__content">
+                                        <div className="data__img">
+                                            <img src={Img_Banner6} alt=""/>
+                                        </div>
+                                        <div className="data__title">Privacy</div>
+                                        <div className="data__description">Our ZK-Snark Technology is leveraged to confidentially provide credit reporting</div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="banner__title">Credit</div>
-                            <div className="banner__image">
-                                <img src={Img_Banner3} alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div className="follow__container" id="pricing">
-                    <div className="pink__text">Get crypto instantly</div>
-                    <div className="seperator"/>
-                    <div className="follow__box">
-                        <div className="follow__image">
-                            <img src={Img_Banner4} alt=""/>
-                        </div>
-                        <div className="follow__contnet">
-                            <div className="follow__title">Based on your account history</div>
-                            <div className="follow__description">You can receive Zora</div>
-                            <div className="button__doit" onClick={this.onSeeMyScore}>Let's do it</div>
-                        </div>
-                    </div>
-                </div>
-                <div className="data__container" id="resources">
-                    <div className="pink__text">Oracle data analyzed to provide confidential credit reporting</div>
-                    <div className="seperator"/>
-                    <div className="data__box">
-                        <div className="data__content">
-                            <div className="data__img">
-                                <img src={Img_Banner5} alt=""/>
-                            </div>
-                            <div className="data__title">Security</div>
-                            <div className="data__description">We use SSL on our web interface to securely transmit data</div>
-                        </div>
-                        <div className="data__content">
-                            <div className="data__img">
-                                <img src={Img_Banner6} alt=""/>
-                            </div>
-                            <div className="data__title">Privacy</div>
-                            <div className="data__description">Our ZK-Snark Technology is leveraged to confidentially provide credit reporting</div>
-                        </div>
-                    </div>
-                </div>
+                        )}
+                    </Scene>
+                </Controller> 
             </div>
         )
     }
