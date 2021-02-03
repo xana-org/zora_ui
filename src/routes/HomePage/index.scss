@@ -4,11 +4,16 @@
     .HomePage {
         z-index: -1;
         .on__chain {
-           padding: 200px 0;
+           padding: 200px 0 80px 0;
            -webkit-animation-duration: 2s;
            animation-duration: 2s;
            -webkit-animation-fill-mode: both;
            animation-fill-mode: both;
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           .texts {
+           }
         }
         .pink__text {
             color: $dark-blue;
@@ -114,7 +119,6 @@
                             flex-direction: column;
                             justify-content: center;
                             .text {
-                                font-family: 'SF UI Display Medium';
                                 font-size: 48px;
                                 text-align: center;
                                 color: $blue-color;
@@ -330,7 +334,6 @@
                             flex-direction: column;
                             justify-content: center;
                             .text {
-                                font-family: 'SF UI Display Medium';
                                 font-size: 48px;
                                 text-align: center;
                                 color: $blue-color;

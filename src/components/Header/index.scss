@@ -34,10 +34,10 @@
                 }
                 .zora__text {
                     font-size: 30px;
-                    font-family: "Roboto-Bold";
                     cursor: pointer;
                     user-select: none;
                     color: black;
+                    font-weight: bold;
                     margin: auto 0 auto 5px;
                 }
                 .beta {
@@ -67,7 +67,6 @@
                     flex-direction: column;
                     justify-content: center;
                     .text {
-                        font-family: Raleway;
                         font-size: 12px;
                         font-weight: 500;
                         color: black;
@@ -133,9 +132,9 @@
                 .zora__text {
                     margin-left: 5px;
                     font-size: 30px;
-                    font-family: "Roboto-Bold";
                     cursor: pointer;
                     user-select: none;
+                    font-weight: bold;
                 }
                 .beta {
                     margin-top: auto;

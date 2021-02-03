@@ -1,85 +1,15 @@
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/fonts/Inter-Regular.woff2?v=3.15") format("woff2"),
-       url("./assets/fonts/Inter-Regular.woff?v=3.15") format("woff");
-}
 
 @font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/fonts/Inter-Bold.woff2?v=3.15") format("woff2"),
-       url("./assets/fonts/Inter-Bold.woff?v=3.15") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/fonts/Inter-Medium.woff2?v=3.15") format("woff2"),
-       url("./assets/fonts/Inter-Medium.woff?v=3.15") format("woff");
-}
-
-@font-face {
-  font-family: 'Inter';
-  font-style:  normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("./assets/fonts/Inter-SemiBold.woff2?v=3.15") format("woff2"),
-       url("./assets/fonts/Inter-SemiBold.woff?v=3.15") format("woff");
-}
-
-@font-face {
-  font-family: 'SF UI Display Black';
-  font-style: normal;
+  font-family: 'Glacial-Indifference-Regular';
+  src:url('./assets/fonts/Glacial-Indifference-Regular.ttf.woff') format('woff'); 
   font-weight: normal;
-  src: local('SF UI Display Black'), url('./assets/fonts/sf-ui-display-black.woff') format('woff')
-}
-
-@font-face {
-font-family: 'SF UI Display Medium';
-font-style: normal;
-font-weight: normal;
-src: local('SF UI Display Medium'), url('./assets/fonts/sf-ui-display-medium.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'SF UI Display Light';
   font-style: normal;
-  font-weight: normal;
-  src: local('SF UI Display Light'), url('./assets/fonts/sf-ui-display-light.woff') format('woff');
-}
-
-@font-face {
-  font-family: 'Roboto-Regular';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Roboto-Bold'), url('./assets/fonts/Roboto-Regular.ttf') format('truetype')
-}
-
-@font-face {
-  font-family: 'Roboto-Bold';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Roboto-Bold'), url('./assets/fonts/Roboto-Bold.ttf') format('truetype')
-}
-
-@font-face {
-  font-family: 'Turbo Charge Condensed Italic Condensed Italic';
-  font-style: normal;
-  font-weight: normal;
-  src: local('Turbo Charge Condensed Italic Condensed Italic'), url('./assets/fonts/TurboChargeCondensedItalic-5qlV.woff') format('woff');
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: Inter, sans-serif;
+  font-family: 'Glacial-Indifference-Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: white;
