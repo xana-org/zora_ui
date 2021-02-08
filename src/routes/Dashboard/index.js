@@ -18,6 +18,7 @@ class Dashboard extends Component {
         }
     }
     drawChart(res, id1, id2) {
+        console.log(res)
         var options1 = {
             type: 'doughnut',
             data: {
@@ -61,7 +62,7 @@ class Dashboard extends Component {
         new Chart(ctx1, options1);
         let score = 0;
         if (res && res.result) {
-            score = Math.floor(res.result.rating * 10);
+            score = Math.floor(res.result.rating);
             this.setState({
                 rating: res.result.rating,
                 ethBalance: res.result.ethBalance,
@@ -105,7 +106,7 @@ class Dashboard extends Component {
         new Chart(ctx2, options2);
     }
     async initilize(addr) {
-        let res = await getScore("https://cors-anywhere.herokuapp.com/http://gov.zoracles.com/rating/" + addr);
+        let res = await getScore("https://credit.zoracles.com/rating/" + addr);
         this.drawChart(res, "chartJSContainer", "secondContainer");
         this.drawChart(res, "chartJSContainer1", "secondContainer1");
     }
@@ -115,7 +116,7 @@ class Dashboard extends Component {
         }
     }
     componentDidUpdate() {
-        if (!this.state.loaded && document.getElementById("chartJSContainer")?.getContext('2d')) {
+        if (this.props.address && !this.state.loaded && document.getElementById("chartJSContainer")?.getContext('2d')) {
             this.setState({
                 loaded: true
             })
