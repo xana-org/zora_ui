@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { compose } from 'redux';
 import { getScore } from '../../utils/api';
+import { connectWallet } from '../../utils/wallet';
 import './index.scss';
 const Chart = require('chart.js');
 
@@ -109,7 +110,9 @@ class Dashboard extends Component {
         this.drawChart(res, "chartJSContainer1", "secondContainer1");
     }
     componentDidMount() {
-        if (!this.props.address) this.props.history.push('/');
+        if (!this.props.address) {
+            connectWallet("METAMASK");
+        }
     }
     componentDidUpdate() {
         if (!this.state.loaded && document.getElementById("chartJSContainer")?.getContext('2d')) {

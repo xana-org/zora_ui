@@ -485,3 +485,24 @@
     -webkit-animation-fill-mode: both;
     animation-fill-mode: both;
 }
+
+.dropdownlist {
+    position: absolute;
+    border-radius: 4px;
+    box-shadow: 0 2px 13px 0 rgba(0, 0, 0, 0.21);
+    background-color: #ffffff;
+    padding: 10px 0;
+    width: 150px;
+    animation: fadeIn ease 0.5s;
+    margin-top: 20px;
+    margin-left: -20px;
+    .dropdown__item {
+      letter-spacing: 0.31px;
+      color: #2a58b5;
+      font-weight: 600;
+      font-size: 14px;
+      padding: 10px 15px;
+      cursor: pointer;
+      text-align: center;
+    }
+}

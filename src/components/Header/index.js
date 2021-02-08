@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, createRef } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
 import { Link } from 'react-scroll';
+import { withRouter } from 'react-router-dom';
 import { updateLoginModalVisible } from '../../store';
 import { shortHash } from '../../utils/_';
+import { logoutWallet } from '../../utils/wallet';
 
 import Img_Twiter           from '../../assets/images/icons/twitter.svg';
 import Img_Subtract         from '../../assets/images/icons/subtract.svg';
@@ -14,21 +16,62 @@ import Img_Youtube          from '../../assets/images/icons/youtube.svg';
 import './index.scss';
 
 class Header extends Component {
+    logRef = createRef();
     constructor(props) {
         super(props);
         this.state = {
             showMenu: false,
+            isLogVisible: false,
         }
     }
+
+    componentDidMount() {
+        document.addEventListener('mousedown', this.HideLogDropdown);
+    }
+
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.HideLogDropdown);
+    }
+
+    HideLogDropdown = (event) => {
+        if (this.logRef && !this.logRef.current?.contains(event.target)) {
+          this.setState({
+            isLogVisible: false,
+          });
+        }
+    };
+
+    onLogout = () => {
+        this.setState({
+          isLogVisible: false,
+        });
+        this.props.history.push('/');
+    };
+
     onNavClick = () => {
         this.setState({showMenu: !this.state.showMenu});
     }
+
+    gotoHomePage = () => {
+        this.props.history.push('/');
+    }
+
+    onDisconnect = (event) => {
+        this.setState({
+          isLogVisible: false,
+        });
+        event.preventDefault();
+        event.stopPropagation();
+        this.gotoHomePage();
+        logoutWallet();
+    }
+
     render() {
         const { address } = this.props;
         return (
             <div className="Header">
                 <div className="content">
-                    <div className="header__title">
+                    <div className="header__title" onClick={this.gotoHomePage}>
                         <div className="purple__circle"/>
                         <div className="zora__text">Zora</div>
                         <div className="beta">(beta)</div>
@@ -54,7 +97,15 @@ class Header extends Component {
                         </div>
                     </div>
                     {address?
-                        <div className="button__signup">{shortHash(address)}</div>:
+                        <div className="button__signup" onClick={() => {
+                            this.setState({isLogVisible: true});
+                        }}>
+                            {shortHash(address)}
+                            {this.state.isLogVisible?
+                                <div className="dropdownlist" ref={this.logRef}>
+                                    <div className="dropdown__item" onClick={this.onDisconnect}>Disconnect Wallet</div>
+                                </div>:(null)}
+                        </div>:
                         <div className="button__signup" onClick={() => this.props.updateLoginModalVisible(1)}>Connect your wallet</div>
                     }
                     <div className="button__nav" onClick={this.onNavClick}>
@@ -83,4 +134,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 }
 
-export default compose(connect(mapStateToProps, mapDispatchToProps))(Header);
+export default compose(withRouter, connect(mapStateToProps, mapDispatchToProps))(Header);
