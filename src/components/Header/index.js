@@ -12,6 +12,7 @@ import Img_Subtract         from '../../assets/images/icons/subtract.svg';
 import Img_Medium           from '../../assets/images/icons/medium.svg';
 import Img_Reddit           from '../../assets/images/icons/reddit.svg';
 import Img_Youtube          from '../../assets/images/icons/youtube.svg';
+import Img_Telegram         from '../../assets/images/icons/telegram.svg';
 
 import './index.scss';
 
@@ -94,6 +95,9 @@ class Header extends Component {
                         </div>
                         <div className="item" onClick={() => window.open("https://zoracles.medium.com/")}>
                             <img src={Img_Medium} alt="" className="social"/>
+                        </div>
+                        <div className="item" onClick={() => window.open("https://t.me/zoracles")}>
+                            <img src={Img_Telegram} alt="" className="social tg"/>
                         </div>
                     </div>
                     {address?

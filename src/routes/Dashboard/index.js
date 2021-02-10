@@ -7,6 +7,7 @@ import './index.scss';
 const Chart = require('chart.js');
 
 class Dashboard extends Component {
+    _mounted = true;
     constructor(props) {
         super(props);
         this.state = {
@@ -18,7 +19,7 @@ class Dashboard extends Component {
         }
     }
     drawChart(res, id1, id2) {
-        console.log(res)
+        if (!this._mounted) return;
         var options1 = {
             type: 'doughnut',
             data: {
@@ -113,8 +114,17 @@ class Dashboard extends Component {
     componentDidMount() {
         if (!this.props.address) {
             connectWallet("METAMASK");
+        } else {
+            this.setState({
+                loaded: true
+            });
+            this.initilize(this.props.address);
         }
     }
+    componentWillUnmount() {
+        this._mounted = false;
+    }
+    
     componentDidUpdate() {
         if (this.props.address && !this.state.loaded && document.getElementById("chartJSContainer")?.getContext('2d')) {
             this.setState({
@@ -123,6 +133,7 @@ class Dashboard extends Component {
             this.initilize(this.props.address);
         }
     }
+
     render() {
         return (
             <div className="Dashboard">

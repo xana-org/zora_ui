@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { compose } from 'redux';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 import './index.scss';
 
 class Footer extends Component {
@@ -19,7 +20,7 @@ class Footer extends Component {
                     </div>
                     <div className="footer__box">
                         <div className="footer__subtitle">QUICK LINKS</div>
-                        <div className="footer__link">Home</div>
+                        <div className="footer__link" onClick={() => window.open("https://zora.cc")}>Home</div>
                         <div className="footer__link" onClick={() => window.open("https://zoracles.com/whitepaper_v1.pdf")}>Whitepaper</div>
                         <div className="footer__link" onClick={() => window.open("https://github.com/zoracles")}>Github</div>
                         <div className="footer__link" onClick={() => window.open("https://zoracles.com/faq.pdf")}>FAQ</div>
@@ -48,4 +49,4 @@ const mapDispatchToProps = (dispatch, ownProps) => {
     };
 }
 
-export default compose(connect(mapStateToProps, mapDispatchToProps))(Footer);
+export default compose(withRouter, connect(mapStateToProps, mapDispatchToProps))(Footer);
