@@ -106,7 +106,7 @@ class Dashboard extends Component {
         new Chart(ctx2, options2);
     }
     async initilize(addr) {
-        let res = await getScore("https://credit.zoracles.com/rating/" + addr);
+        let res = await getScore("https://zora.cc/rating/" + addr);
         this.drawChart(res, "chartJSContainer", "secondContainer");
         this.drawChart(res, "chartJSContainer1", "secondContainer1");
     }
