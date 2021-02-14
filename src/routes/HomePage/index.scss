@@ -506,3 +506,45 @@
       text-align: center;
     }
 }
+.faq__container {
+    padding: 100px 0;
+    .faq__content {
+        @media screen and (min-width: 880px) {
+            width: 1200px;
+            margin: 0 auto;
+            @media screen and (max-width: 1240px) {
+                width: calc(100% - 40px);
+                margin: 0 20px;
+            }
+        }
+        .faq__container__title {
+            font-size: 40px;
+            color: #2a58b5;
+            margin-bottom: 30px;
+            @media screen and (max-width: 880px) {
+                text-align: center;
+            }
+        }
+        .partners {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            @media screen and (max-width: 880px) {
+                flex-direction: column;
+            }
+            .logo {
+                width: 20%;
+                margin: auto 0;
+                cursor: pointer;
+                @media screen and (max-width: 880px) {
+                    margin: 10px auto;
+                    width: 80%;
+                    max-width: 200px;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

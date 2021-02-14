@@ -13,7 +13,10 @@ import Img_Banner3  from '../../assets/images/homepage/3.png';
 import Img_Banner4  from '../../assets/images/homepage/4.png';
 import Img_Banner5  from '../../assets/images/homepage/5.svg';
 import Img_Banner6  from '../../assets/images/homepage/6.png';
-
+import Img_Bloom    from '../../assets/images/homepage/bloomberg.png';
+import Img_Yahoo    from '../../assets/images/homepage/yahoo.png';
+import Img_entre    from '../../assets/images/homepage/entrepreneur.png';
+import Img_hacker   from '../../assets/images/homepage/hacker.png';
 
 class HomePage extends Component {
     componentDidUpdate() {
@@ -131,7 +134,26 @@ class HomePage extends Component {
                             </div>
                         )}
                     </Scene>
-                </Controller> 
+                </Controller>
+                <div className="faq__container">
+                    <div className="faq__content">
+                        <div className="faq__container__title">Trusted by our customers and partners</div>
+                        <div className="partners">
+                            <div className="logo"
+                                onClick={() => window.open("https://www.bloomberg.com/press-releases/2020-11-23/zoracles-launches-snarks-as-a-service-for-confidential-credit-checks")}
+                            ><img src={Img_Bloom} alt=""></img></div>
+                            <div className="logo"
+                                onClick={() => window.open("https://finance.yahoo.com/news/zoracles-launches-snarks-confidential-credit-163000563.html")}
+                            ><img src={Img_Yahoo} alt=""></img></div>
+                            <div className="logo"
+                                onClick={() => window.open("https://www.entrepreneur.com/article/362584")}
+                            ><img src={Img_entre} alt=""></img></div>
+                            <div className="logo"
+                                onClick={() => window.open("https://hackernoon.com/crypto-series-2-zero-knowledge-oracles-uniswap-and-decentralized-games-3eh3z7p")}
+                            ><img src={Img_hacker} alt=""></img></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         )
     }
