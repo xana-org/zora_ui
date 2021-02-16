@@ -137,7 +137,7 @@ class HomePage extends Component {
                 </Controller>
                 <div className="faq__container">
                     <div className="faq__content">
-                        <div className="faq__container__title">Trusted by our customers and partners</div>
+                        <div className="faq__container__title">As Mentioned In</div>
                         <div className="partners">
                             <div className="logo"
                                 onClick={() => window.open("https://www.bloomberg.com/press-releases/2020-11-23/zoracles-launches-snarks-as-a-service-for-confidential-credit-checks")}
