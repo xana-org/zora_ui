@@ -27,7 +27,8 @@
     "sass-loader": "^10.1.1",
     "scrollmagic": "^2.0.8",
     "style-loader": "^2.0.0",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "yarn": "^1.22.10"
   },
   "scripts": {
     "start": "react-scripts start",

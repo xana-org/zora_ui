@@ -139,9 +139,6 @@ class Dashboard extends Component {
             <div className="Dashboard">
                 <div className="content">
                     <div className="dialog">
-                        <div className="close__dialog">
-                            <i className="fa fa-times"></i>
-                        </div>
                         <div className="dialog__text">
                             <div>Zora Credit Lines</div>
                             <span>(coming soon)</span>
